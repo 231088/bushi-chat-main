@@ -22,6 +22,8 @@ PHP 8.1.2で動作を確認しています
 
 全体の動作確認ページ
 
+[https://github.com/231088/bushi-chat-receiver](https://nakay.jp/bushi/)
+
 socket.ioサーバーのリポジトリ:
 
 [https://github.com/231088/bushi-chat-receiver](https://github.com/231088/bushi-chat-receiver)
