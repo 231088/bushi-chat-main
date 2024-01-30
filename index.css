@@ -1,0 +1,111 @@
+h1 {
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* チャット内容表示エリア */
+
+#chat-mainbox{
+    width: 750px;
+}
+
+#scroller{
+    height:60vh;
+    width: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    overflow-y: scroll;
+    background-color: rgb(210, 210, 210);
+}
+
+#scroller > *:not(:first-child){
+    margin-bottom: 10px;
+}
+
+.text-area{
+    width: 85%;
+}
+
+.text-area.right-side{
+    text-align: right;
+}
+
+.text-area.right-side > p{
+    margin: 0;
+    padding: 15px 5px;
+    background-color: rgb(175, 238, 199);
+    border-radius: 5px;
+}
+
+.text-area.left-side{
+    text-align: left;
+}
+
+.text-area.left-side > p{
+    margin: 0;
+    padding: 15px 5px;
+    background-color: rgb(213, 175, 238);
+    border-radius: 5px;
+}
+
+
+
+/* テキスト送信フォーム */
+.input-form{
+    width: 700px;
+    height: 80px;
+    display: flex;
+}
+
+.input-form > .text-input-box{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.input-form > p{
+    margin: 0;
+    width: 20%;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#chat-box{
+    resize: none;
+    width: 60%;
+    font-size: 18px;
+}
+
+.input-form > .submitButton{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* サイトの説明エリア */
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info > p{
+    font-size: 20px;
+}
