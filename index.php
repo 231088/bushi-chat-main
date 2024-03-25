@@ -80,6 +80,22 @@ $s = function ($str) {
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
+        // 蓋絵を切り替える関数
+        function toggleCurtain(){
+            // 蓋絵要素の存在確認
+            const curtain = document.getElementById('curtain');
+            if(curtain){
+                // 蓋絵要素が存在する場合、削除
+                curtain.remove();
+            }else{
+                // 蓋絵要素が存在しない場合、作成
+                const newDiv = document.createElement("div");
+                newDiv.id = 'curtain';
+                newDiv.className = 'curtain';
+                document.body.appendChild(newDiv);
+            }
+        }
+
         const scroller = document.getElementById('scroller');
         scroller.scrollTop = scroller.scrollHeight - scroller.clientHeight;
 
@@ -109,6 +125,7 @@ $s = function ($str) {
         });
 
         function sendmessage() {
+            toggleCurtain();
             const text = document.getElementById('chat-box').value;
             document.getElementById('chat-box').value = '';
             if (text == '') return;
@@ -116,6 +133,7 @@ $s = function ($str) {
         }
 
         socket.on('sendmessage', (data) => {
+            toggleCurtain();
             const parentElement = document.getElementById('scroller');
             const firstChild = parentElement.firstElementChild;
             const newDiv = document.createElement("div");
